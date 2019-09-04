@@ -1,0 +1,37 @@
+{
+  "name": "newsapp",
+  "version": "1.0.0",
+  "description": "webpack integration",
+  "main": "index.js",
+  "scripts": {
+    "open": "webpack-dev-server --inline --content-base ./dist",
+    "build": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "author": "Nikhil",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "css-loader": "^3.2.0",
+    "es6-promise": "^4.2.8",
+    "fetch-ie8": "^1.5.0",
+    "html-webpack-plugin": "^3.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "less": "^3.9.0",
+    "sass": "^1.22.9",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.6"
+  }
+}
