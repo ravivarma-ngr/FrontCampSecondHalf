@@ -1,0 +1,17 @@
+<header>
+    <!-- <div class="titleMain"> -->
+            <nav class="navbar navbar-expand-lg titleMain">
+        <h2 class="navbar-brand">NEWSFEED</h2>
+        <h6 class="navbar-text"><i>Yet another newsfeed</i></h6>
+        <div class="navbar-nav ml-auto">
+                <div *ngIf="userName else loginbtn">
+                  <span class="navbar-text d-inline">Hello, {{userName}}.         </span>
+                  <button type="button" class="btn btn-light" (click)="logout()" >LogOut</button>
+                </div>
+                <ng-template #loginbtn>
+                        <a class="nav-link" (click)="login()">Login</a>
+                </ng-template>
+              </div>
+        </nav>
+    <!-- </div> -->
+</header>

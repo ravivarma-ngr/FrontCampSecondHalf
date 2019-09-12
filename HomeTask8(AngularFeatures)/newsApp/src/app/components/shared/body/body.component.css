@@ -1,0 +1,60 @@
+/* Post */
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.postBody {
+    padding-left: 40px;
+}
+.post {
+    height: 240px;
+    width: 95%;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.postButton {
+    background: rgb(211, 44, 3);
+    height: 30px;
+    width: 180px;
+    color: white;
+    border:0;
+}
+
+.divideLine {
+    margin-left: 15px;
+    width: 95%;
+}
+
+.marginForPost {
+    margin: 5px 0 0 0 ;
+}
+
+.flxMain {
+    display: flex;
+    flex-direction: row;
+}
+
+    
+.flxVertical {
+        display: flex;
+        flex-direction: column;
+}
+
+.allPosts {
+        width: 90%;
+}
+
+.fontLight {
+    font-weight: 100;
+    color: rgba(97, 96, 96, 0.904);
+}
+
+.postDesc{
+    width : 90%;
+}
+
+.minHeight{
+    min-height: 385px;
+}

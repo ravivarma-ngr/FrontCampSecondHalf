@@ -1,0 +1,36 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form-group minHeight">
+
+  <label>
+    Heading:
+    <input type="text" formControlName="title" class="form-control">
+  </label>
+<!-- id
+  <label>
+    Short Desc:
+    <input type="text" formControlName="shortDesc">
+  </label> -->
+  <label>
+    Date:
+    <input type="text" formControlName="publishedAt" class="form-control">
+  </label>
+
+  <label>
+    Category:
+    <input type="text" formControlName="author" class="form-control">
+  </label>
+  <label>
+    Source URL:
+    <input type="text" formControlName="urlToImage" class="form-control">
+  </label>
+
+  <label>
+    Content:
+  </label>
+    <textarea type="text" formControlName="description" class="form-control"></textarea>
+  
+
+  <button type="submit" [disabled]="!profileForm.valid" class="btn">Submit</button>
+
+  <button (click)="onCancel()" class="btn">Cancel</button>
+
+</form>

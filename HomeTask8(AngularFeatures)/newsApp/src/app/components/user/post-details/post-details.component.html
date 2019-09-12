@@ -1,0 +1,42 @@
+<div class="container">
+<h2>{{data.title}}</h2>
+
+<div>
+        <!-- <div>
+            <div><img src={{data.imageSrc}} alt="Post Image"></div>
+            <div>
+                <h6><span class="fontLight">Posted on </span>{{data.postDate}} <span class="fontLight">// Category :</span>{{data.postCategory}}</h6>
+                <p>{{data.postDesc}}</p>
+                <button class="postButton" routerLink="/body/all">Go Back</button>
+            </div>
+        </div> -->
+        <div>
+                <div><img src={{data.urlToImage}} alt="Post Image"></div>
+                <div>
+                    <h6><span class="fontLight">Posted on </span>{{data.publishedAt | date: 'fullDate'}} <span class="fontLight">// Category :</span>{{data.author}}</h6>
+                    <h6>Comments Count : {{data.comments.length}}</h6>
+                    <p>{{data.description}}</p>
+                    <button class="postButton" routerLink="/body/cnn">Go Back</button>
+                </div>
+            <hr>
+        </div>
+        <div class="card">
+            <div *ngFor="let comment of data.comments" class="card-body">
+                    {{comment}}
+                    <hr>
+            </div>
+          </div>
+        <!-- <p *ngFor="let comment of data.comments">{{comment}}</p> -->
+        <form class="form-inline" role="form">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Your comments" #newComment/>
+                </div>
+                <div class="form-group">
+                    <button type="reset" (click)="onSubmitComment(newComment.value)" class="btn btn-default">Add</button>
+                </div>
+        </form>
+        <!-- <div>
+            <textarea #newComment>enter comments</textarea>
+            <button (click)="onSubmitComment(newComment.value)">Post Comment</button>
+        </div> -->
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+<h2>{{data.title}}</h2>
+
+<div>
+        <!-- <div>
+            <div><img src={{data.imageSrc}} alt="Post Image"></div>
+            <div>
+                <h6><span class="fontLight">Posted on </span>{{data.postDate}} <span class="fontLight">// Category :</span>{{data.postCategory}}</h6>
+                <p>{{data.postDesc}}</p>
+                <button class="postButton" routerLink="/body/all">Go Back</button>
+            </div>
+        </div> -->
+        <div>
+                <div><img src={{data.urlToImage}} alt="Post Image"></div>
+                <div>
+                    <h6><span class="fontLight">Posted on </span>{{data.publishedAt | date: 'fullDate'}} <span class="fontLight">// Category :</span>{{data.author}}</h6>
+                    <p>{{data.description}}</p>
+                    <button class="postButton" routerLink="/body/cnn">Go Back</button>
+                </div>
+            </div>
+        <hr>
+    </div>
+</div>

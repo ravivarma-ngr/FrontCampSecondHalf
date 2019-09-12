@@ -1,0 +1,50 @@
+  <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form-group minHeight">
+
+        <div class="form-group">
+        <label>
+            User Name :
+            <input type="text" formControlName="userName" class="form-control">
+          </label>
+          </div>
+          <div class="form-group">
+      <label>
+        Password :
+        <input type="password" formControlName="password" class="form-control">
+      </label>
+    </div>
+
+      <button type="submit" [disabled]="!profileForm.valid" class="btn btn-default">Submit</button>
+
+  <button (click)="onCancel()" class="btn">Cancel</button>
+
+</form> -->
+
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <h3>LogIn</h3>
+              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                  <div class="form-group">
+                      <label for="userName">UserId</label>
+                      <input type="text" class="form-control" name="userName" [(ngModel)]="model.userName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                      <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                          <div *ngIf="firstName.errors.required">First Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+                      <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                          <div *ngIf="password.errors.required">Password is required</div>
+                          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-primary">SignIn</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+/* Footer */
+.footerContent {
+    display: flex;
+    align-items: center;
+    background: rgb(4, 47, 97);
+    color: white;
+    height: 50px;
+}
+
+.marginForFooterContent {
+    margin: 0 0 0 45%;
+}

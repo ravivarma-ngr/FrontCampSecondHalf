@@ -1,0 +1,12 @@
+.fontLight {
+    font-weight: 100;
+    color: rgba(97, 96, 96, 0.904);
+}
+
+.postButton {
+    background: rgb(211, 44, 3);
+    height: 30px;
+    width: 180px;
+    color: white;
+    border:0;
+}

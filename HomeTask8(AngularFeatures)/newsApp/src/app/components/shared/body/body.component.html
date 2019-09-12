@@ -1,0 +1,20 @@
+<app-main-header (selectedSource)="changeOfSource($event)" ></app-main-header>
+
+<div class=" col-md-10 blogShort">
+<a *ngFor="let post of allPosts; let i = index">
+    <div class="row">
+        <div class="post flxMain">
+            <div><img src={{post.urlToImage}} alt="Post Image" class="image"></div>
+            <div class="postBody">
+                <h2 class="postTitle">{{post.title | uppercase}}</h2>
+                <h6 class="postTitleDesc"><span class="fontLight">Posted on </span>{{post.publishedAt | date: 'fullDate'}} <span class="fontLight">// Category :</span>{{post.author}}</h6>
+                <p class="postDesc">{{post.description}}</p>
+                <!-- .postDesc.substring(0,200)+'...' -->
+                <button class="postButton"  routerLink="/postDetails/{{i}}">Continue Reading</button>
+            </div>
+        </div>
+        <hr class="divideLine">
+    </div>
+</a>
+</div>
+

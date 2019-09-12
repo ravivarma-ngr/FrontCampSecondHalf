@@ -1,0 +1,17 @@
+.mainHeader{
+    background-color:rgb(255, 255, 255);
+}
+
+.flxRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainHeaderTitle{
+    margin: 0 0 0 0 ;
+    text-align: center;
+}
+
+.btnAddArticle{
+    margin-left: auto;
+}
